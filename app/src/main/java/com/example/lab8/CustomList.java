@@ -49,4 +49,19 @@ public class CustomList {
         Collections.sort(list);
         return list;
     }
+
+    /**
+     * This returns a boolean if we have a city or not
+     * @param city
+     * @return
+     * Returns a boolean
+     */
+    public boolean hasCity(City city) {
+        for (City cityL : cities) {
+            if (cityL.getCityName() == city.getCityName() && cityL.getProvinceName() == city.getProvinceName()) {
+                return true;
+            }
+        }
+        return false;
+    }
 }
