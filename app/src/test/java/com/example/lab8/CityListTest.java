@@ -12,7 +12,7 @@ import java.util.ArrayList;
 public class CityListTest {
     private CustomList mockCityList() {
         ArrayList<City> cityDataList = new ArrayList<>();
-        CustomList cityList = new CustomList(mockCityList().getContext(), cityDataList);
+        CustomList cityList = new CustomList(cityDataList);
         cityList.add(mockCity());
         return cityList;
     }

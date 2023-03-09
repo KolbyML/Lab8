@@ -11,8 +11,8 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
     // Declare the variables so that you will be able to reference it later.
     ListView cityList;
-    ArrayAdapter<City> cityAdapter;
     ArrayList<City> cityDataList;
+    CustomList customList;
 
 
     @Override
@@ -31,8 +31,7 @@ public class MainActivity extends AppCompatActivity {
         cityDataList.add(new City("Waterloo","ON"));
 
 
-        cityAdapter = new CustomList(this, cityDataList);
-        cityList.setAdapter(cityAdapter);
+        customList = new CustomList(cityDataList);
 
     }
 }
