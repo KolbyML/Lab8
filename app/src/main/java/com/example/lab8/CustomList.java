@@ -49,8 +49,12 @@ public class CustomList extends ArrayAdapter<City> {
         return cities.size();
     }
 
+
+    /**
+     * This adds a city to the list if the city does not exist
+     * @param city
+     * This is a candidate city to add
+     */
     public void addCity(City city){
-
     }
-
 }
