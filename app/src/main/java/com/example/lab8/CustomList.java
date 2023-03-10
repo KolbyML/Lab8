@@ -26,6 +26,21 @@ public class CustomList {
         return cities.size();
     }
 
+    /**
+     * This deletes a city if it is contained in the list, else throws and error
+     * @param city
+     */
+    public void delete(City city) {
+        int i = 0;
+        for (City cityL : cities) {
+            if (cityL.getCityName() == city.getCityName() && cityL.getProvinceName() == city.getProvinceName()) {
+                cities.remove(i);
+                return;
+            }
+            i++;
+        }
+        throw new IllegalArgumentException();
+    }
 
     /**
      * This adds a city to the list if the city does not exist
